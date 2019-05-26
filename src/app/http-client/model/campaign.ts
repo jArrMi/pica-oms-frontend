@@ -1,7 +1,7 @@
 /**
  * OMS API
  * API for management of products and orders
- * 
+ *
  */
 import { Product } from './product';
 
@@ -9,7 +9,7 @@ import { Product } from './product';
 /**
  * Objeto que representa una promocion
  */
-export interface Campaign { 
+export interface Campaign {
     /**
      * ID de la promocion
      */

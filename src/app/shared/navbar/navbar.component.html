@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand" href="#">
+    <img src="assets/img/A-64.png" width="30" height="30" alt="">
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['products']">Productos</a>
+      </li>
+
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['orders']">Ordenes</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['campaigns']">Campañas</a>
+      </li>
+
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+
+      <!--<h3 [routerLink]="['/car']" class="mr-3 mt-1" style="color: white; cursor: pointer">
+        {{   this.productsService.car.length }}</h3>-->
+
+      <!--<div class="form-group" class="mr-sm-2">
+        <select class="form-control" id="sel1" #tipoBusqueda>
+          <option [value]="1">Nombre</option>
+          <option [value]="2">Descripcion</option>
+
+        </select>
+
+
+        <input class="form-control mr-sm-2" type="text" (keyup.enter)="searchProduct(buscarTexto.value)" #buscarTexto>
+        <button (click)="searchProduct(buscarTexto.value, tipoBusqueda.value)"
+                class="btn btn-outline-primary my-2 my-sm-0" type="button">Buscar</button>
+      </div>-->
+    </form>
+
+  </div>
+</nav>
