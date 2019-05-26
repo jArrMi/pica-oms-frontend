@@ -9,6 +9,7 @@ import {AppComponent} from './app.component';
 
 import {LoginComponent} from './login/login.component';
 import {NavbarComponent} from './shared/navbar/navbar.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {NavbarComponent} from './shared/navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [
     {provide: BASE_PATH, useValue: 'https://your-web-service.com'}

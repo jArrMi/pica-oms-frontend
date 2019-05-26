@@ -2,31 +2,39 @@
 
   <div class="row justify-content-md-center">
 
-    <form class="col-md-6 ">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="col-md-6">
 
       <div class="row">
         <div class="form-group col-md-12">
           <label for="email">Correo:</label>
-          <input type="text" class="form-control" id="email">
+
+          <input type="text" formControlName="username" class="form-control"
+                 [ngClass]="{ 'is-invalid': submitted && f.username.errors }" id="email">
+          <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+          </div>
         </div>
       </div>
 
       <div class="row">
         <div class="form-group col-md-12">
           <label for="password">Password:</label>
-          <input type="password" class="form-control" id="password">
+
+          <input type="password" formControlName="password" class="form-control"
+                 [ngClass]="{ 'is-invalid': submitted && f.password.errors }" id="password">
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+          </div>
         </div>
       </div>
 
-      <a [routerLink]="['/register']">
-        <h6 class="text-center">Desea registrarse?</h6>
-      </a>
+      <div class="form-group">
+        <button type="button" [disabled]="loading" class="btn btn-outline-primary btn-block active mt-1">Ingresar
+        </button>
 
-      <button (click)="loginUser()" type="button" class="btn btn-outline-primary btn-block active mt-1">
-        Ingresar
-      </button>
-
+        <img *ngIf="loading" class="pl-3"
+             src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+      </div>
     </form>
-
   </div>
 </div>

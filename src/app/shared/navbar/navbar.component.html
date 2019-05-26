@@ -23,15 +23,13 @@
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['campaigns']">Campañas</a>
       </li>
-
     </ul>
+    <!--<form class="form-inline my-2 my-lg-0">
 
-    <form class="form-inline my-2 my-lg-0">
+      <h3 [routerLink]="['/car']" class="mr-3 mt-1" style="color: white; cursor: pointer">
+        {{   this.productsService.car.length }}</h3>
 
-      <!--<h3 [routerLink]="['/car']" class="mr-3 mt-1" style="color: white; cursor: pointer">
-        {{   this.productsService.car.length }}</h3>-->
-
-      <!--<div class="form-group" class="mr-sm-2">
+      <div class="form-group" class="mr-sm-2">
         <select class="form-control" id="sel1" #tipoBusqueda>
           <option [value]="1">Nombre</option>
           <option [value]="2">Descripcion</option>
@@ -42,8 +40,8 @@
         <input class="form-control mr-sm-2" type="text" (keyup.enter)="searchProduct(buscarTexto.value)" #buscarTexto>
         <button (click)="searchProduct(buscarTexto.value, tipoBusqueda.value)"
                 class="btn btn-outline-primary my-2 my-sm-0" type="button">Buscar</button>
-      </div>-->
-    </form>
+      </div>
+    </form>-->
 
   </div>
 </nav>

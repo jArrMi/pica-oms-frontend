@@ -162,6 +162,7 @@ export const environment = {
 ```
 
 In the src/app/app.module.ts:
+
 ```
 import { BASE_PATH } from '';
 import { environment } from '../environments/environment';
